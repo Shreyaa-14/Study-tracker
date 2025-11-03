@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d8b4f8, #f3e8ff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(180, 130, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #a775f1;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.add-habit {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#habitInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #c8a2ff;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#habitInput:focus {
+  border-color: #a775f1;
+  box-shadow: 0 0 8px #d0b3ff;
+}
+
+#addHabitBtn {
+  padding: 10px 15px;
+  background-color: #a775f1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#addHabitBtn:hover {
+  background-color: #935ef8;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+}
+
+.habit {
+  background: #f8f5ff;
+  padding: 10px;
+  border: 1px solid #e1d9ff;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.habit:hover {
+  background: #f0e8ff;
+}
+
+.habit span {
+  font-weight: 500;
+  color: #844df5;
+}
+
+.habit button {
+  background-color: #b893f6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.habit button:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.habit .delete-btn {
+  background-color: #c481f3;
+}
+
+.chart-section {
+  margin-top: 25px;
+  transition: margin-top 0.3s ease;
+  text-align: center;
+}
+
+#chart {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: flex-end;
+  min-height: 150px;
+  transition: all 0.3s ease;
+}
+
+.bar {
+  background: linear-gradient(180deg, #cdb4ff, #a775f1);
+  width: 30px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: height 0.4s ease, transform 0.3s ease;
+}
+
+.bar:hover {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, #a775f1, #cdb4ff);
+}
+
+.reset-btn {
+  margin-top: 15px;
+  background-color: #b893f6;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #a775f1;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9em;
+  color: #777;
+  font-style: italic;
+}
+
+/* Floating heart animation */
+.floating-heart {
+  position: fixed;
+  bottom: 50px;
+  font-size: 24px;
+  animation: floatUp 2s ease-out forwards;
+  color: #a775f1;
+}
+
+@keyframes floatUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-150px); }
+}
